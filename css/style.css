@@ -1,0 +1,75 @@
+.Titel {
+    position: relative;
+    height: 50px;
+    padding-top: 25px;
+}
+.Titel h2 {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; 
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.Titel h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px  #3a91c6;
+}
+.Titel h2:nth-child(2) {
+    color:   #3a91c6;
+    animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(0% 34%, 15% 44%, 32% 50%, 54% 60%, 70% 61%,
+                84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%,
+                84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+@media (max-width: 768px) {
+    .Titel h2 {
+        font-size: 2em;
+    }
+}
+#addbtn{
+    width: 20%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.card-img-top {
+    animation: animated 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes animated {
+from {
+    opacity: 0;
+    scale: 0;
+    transform: translateX(200px);
+}
+to {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0);
+}
+}
+.form-control{
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.card.h-100 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.card-body {
+    text-align: center;
+    background-color: #e7ebebd6;
+}
